@@ -4,29 +4,29 @@ body {
     margin: 0;
     padding: 0;
     
-    background-color: rgb(128,128,128); /* Vaaleanharmaa taustaväri koko sivulle */
-    color: #333; /* Tumma harmaa teksti */
+    background-color: rgb(128,128,128); 
+    color: #333; 
     
 
 }
 
- /* taustan väri */
+ 
  .navbar-custom {
     background-color:  rgb(128,128,128) ;
 }
 
-/* brandin ja tekstin väri */
+
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text{
     color: white;
 }
 
-/* linkin väri */
+
 .navbar-custom .navbar-nav .nav-link {
     color: white;
 }
 
-/* aktiivisen & hover-linkin väri */
+
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
     color: black;
@@ -76,20 +76,20 @@ main {
 
 
         .carousel-inner img {
-            width: 100%; /* Kuvien leveys 100% karusellin sisällä */
-            height: auto; /* Kuvien korkeus säilyttää alkuperäisen mittasuhteen /* 
+            width: 100%; 
+            height: auto;  
         }
         .carousel {
-            max-width: 600px; /* Maksimileveys karusellille */
-            margin: 0 auto; /* Keskittää karusellin vaakasuunnassa */
+            max-width: 600px; 
+            margin: 0 auto; 
         }
         .carousel-item {
-            height: 400px; /* Korkeus karusellin yksittäisille kohdille */
-            overflow: hidden; /* Piilottaa mahdolliset ylittävät kuvat */
+            height: 400px; 
+            overflow: hidden; 
         }
         .carousel-item img {
-            height: 100%; /* Kuvien korkeus täyttää karusellin kohdan */
-            object-fit: cover; /* Kuvien rajaus ja venytys säilyttää kuvan muodon */
+            height: 100%; 
+            object-fit: cover; 
         }
 
 
