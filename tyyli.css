@@ -1,43 +1,96 @@
 body {
-    font-family: Arial, sans-serif;
+
+    font-family: Georgia, "Times New Roman", Times, serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    
+    background-color: rgb(128,128,128); /* Vaaleanharmaa taustaväri koko sivulle */
+    color: #333; /* Tumma harmaa teksti */
+    
+
+}
+
+ /* taustan väri */
+ .navbar-custom {
+    background-color:  rgb(128,128,128) ;
+}
+
+/* brandin ja tekstin väri */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text{
+    color: white;
+}
+
+/* linkin väri */
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
+}
+
+/* aktiivisen & hover-linkin väri */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: black;
+}
+
+nav a { font-family: Georgia, 'Times New Roman', Times, serif;
 }
  
 header {
-    background-color: #333;
+    background-color: rgb(128,128,128);
     color: white;
     padding: 1rem;
     text-align: center;
 }
+
+h1 {font-family: Georgia, 'Times New Roman', Times, serif;
+    color:white;
+
+}
+
+h2 {font-family: Georgia, 'Times New Roman', Times, serif;
+    color:white;
+    font-size: small;
+
+}
  
+h3 {font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:x-small;
+}
+
+h4 {font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h5 {font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 main {
     padding: 2rem;
+    background-color: rgb(128,128,128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
- 
-.dog-info {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
- 
-.dog-info img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
- 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+
+
+
+
+        .carousel-inner img {
+            width: 100%; /* Kuvien leveys 100% karusellin sisällä */
+            height: auto; /* Kuvien korkeus säilyttää alkuperäisen mittasuhteen /* 
+        }
+        .carousel {
+            max-width: 600px; /* Maksimileveys karusellille */
+            margin: 0 auto; /* Keskittää karusellin vaakasuunnassa */
+        }
+        .carousel-item {
+            height: 400px; /* Korkeus karusellin yksittäisille kohdille */
+            overflow: hidden; /* Piilottaa mahdolliset ylittävät kuvat */
+        }
+        .carousel-item img {
+            height: 100%; /* Kuvien korkeus täyttää karusellin kohdan */
+            object-fit: cover; /* Kuvien rajaus ja venytys säilyttää kuvan muodon */
+        }
+
 
 
