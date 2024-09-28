@@ -1,0 +1,13 @@
+{
+    "toteutuksen_nimi": "Digikurssi",
+    "osallistujien_lukumäärä": 2,
+    "osallistujien_nimet": [
+      "Mikko Seppä",
+      "Kaisu Pekko"
+    ],
+    "alkamisaika": "2024-09-01T09:00:00",
+    "loppumisaika": "2024-12-01T17:00:00",
+    "kesto_viikkoina": 12,
+    "kuva": "https://example.com/kuva.jpg"
+  }
+  
