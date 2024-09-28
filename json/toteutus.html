@@ -32,7 +32,10 @@
             teksti = "<h1>" + data.toteutuksen_nimi + "</h1>";
 
             // tähän tulee muiden tietojen käsittely kohta
-            teksti = teksti + "<p>" + data.osallistujien_lukumaara + "</p>"; 
+            teksti = teksti + "<p>" + data.osallistujien_lukumaara + "</p>";
+            teksti = teksti + "<p>" + data.osallistujien_nimet + "</p>";
+            teksti = teksti + "<p>" + data.alkamisaika + data.loppumisaika + "</p>";
+            teksti = teksti + "<p>" + data.kesto_viikkoina + "</p>";
             //teksti-muuttujan sisällön tulostus 
             document.getElementById("vastaus").innerHTML = teksti;
         }
