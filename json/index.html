@@ -34,7 +34,7 @@
             // tähän tulee muiden tietojen käsittely kohta
             teksti = teksti + "<p>" + data.kuvaus + "</p>";
             teksti = teksti + "<p><img src='" + data.kuva + "' alt='kuva' ></p>";
-            teksti = teksti + "<h3>Opintojakso: " + data.opintojakso[0].nimi + "</h3>";
+            teksti = teksti + "<h3>Opintojakso: " + data.opintojakso.nimi + "</h3>";
 
             teksti = teksti + "<ul>"
             for(var i = 0; i < data.sisalto.length; i++) {
