@@ -11,19 +11,47 @@
     <script>
 
       fetch('https://raw.githubusercontent.com/hetaol/hetaol.github.io/refs/heads/main/json/oma.json')
-        .then(response => {
-                if (!response.ok) {
-                    throw new Error('Verkkovirhe');
-                }
-                return response.json();
-            })
-            .then(data => {
-                const otsikko = data.otsikko; // Oletetaan, että JSON-tiedostossa on avain "otsikko"
-                document.getElementById('vastaus').innerText = otsikko;
-            })
-            .catch(error => {
-                console.error('Virhe:', error);
-            });
+        // Muunnetaan vastaus JSON muotoon
+          .then(function (response) { return response.json();
+          })
+
+          // Käsitellään muunnettu (eli JSON muotoinen) vastaus
+          .then(function (responseJson) {
+ 
+            kerro(responseJson);;
+        })
+
+        // Jos tuli jokin virhe
+          .catch(function (error) { document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+          });
+
+        function kerro(data){
+            var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätään
+
+            // otsikkotiedon hakeminen ja sijoittaminen h1-elementtiin 
+            teksti = "<h1>" + data.otsikko + "</h1>";
+
+            // tähän tulee muiden tietojen käsittely kohta
+            teksti = teksti + "<p>" + data.kuvaus + "</p>";
+            teksti = teksti + "<p><img src='" + data.kuva + "' alt='kuva' ></p>";
+            teksti = teksti + "<h3>Opintojakso: " + data.opintojakso.nimi + "</h3>";
+
+            teksti = teksti + "<ul>"
+            for(var i = 0; i < data.opintojakso.sisalto.length; i++) {
+              teksti = teksti + "<li>" + data.opintojakso.sisalto[i] + "</li>";
+            }
+            teksti = teksti + "</ul>"
+            
+            for(var i = 0; i < data.opintojakso.tekniikat.length; i++) {
+              teksti = teksti + "<p>" + data.opintojakso.tekniikat[i].aihe +"</p>";
+              linkki = data.opintojakso.tekniikat[i].linkki
+              teksti = teksti + "<a href=" + linkki + ">" + data.opintojakso.tekniikat[i].aihe + "</a>"
+              //teksti = teksti + "<p>" + data.opintojakso.tekniikat[i].linkki +"</p>";
+            }  
+            //teksti-muuttujan sisällön tulostus 
+            document.getElementById("vastaus").innerHTML = teksti;
+        }
+
       
       </script>
 </body>
