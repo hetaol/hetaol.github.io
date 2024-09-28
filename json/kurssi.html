@@ -6,6 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 <body> 
-    <div id="vastaus"> </div>
-    <script src='oma.js'></script>
+    <div id="vastaus">
+    </div>
+    <script>
+
+      fetch('https://raw.githubusercontent.com/hetaol/hetaol.github.io/refs/heads/main/json/oma.json')
+        .then(response => {
+                if (!response.ok) {
+                    throw new Error('Verkkovirhe');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const otsikko = data.otsikko; // Oletetaan, että JSON-tiedostossa on avain "otsikko"
+                document.getElementById('vastaus').innerText = otsikko;
+            })
+            .catch(error => {
+                console.error('Virhe:', error);
+            });
+      
+      </script>
 </body>
