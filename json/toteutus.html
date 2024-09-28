@@ -6,28 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 <body> 
-    <div id="vastaus"></div>
+    <div id="vastaus">
     </div>
     <script>
 
-        fetch('https://raw.githubusercontent.com/hetaol/hetaol.github.io/refs/heads/main/json/oma2.json')
-          // Muunnetaan vastaus JSON muotoon
-            .then(function (response) { return response.json();
-            })
-  
-            // Käsitellään muunnettu (eli JSON muotoinen) vastaus
-            .then(function (responseJson) {
-   
-              kerro(responseJson);;
+      fetch('https://raw.githubusercontent.com/hetaol/hetaol.github.io/refs/heads/main/json/oma2.json')
+        // Muunnetaan vastaus JSON muotoon
+          .then(function (response) { return response.json();
           })
 
-          // Jos tuli jokin virhe
+          // Käsitellään muunnettu (eli JSON muotoinen) vastaus
+          .then(function (responseJson) {
+ 
+            kerro(responseJson);;
+        })
+
+        // Jos tuli jokin virhe
           .catch(function (error) { document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
           });
 
-          function kerro(data){
-            var teksti = "";
+        function kerro(data){
+            var teksti = ""; // määritellään muuttuja, johon tulostettava tieto kerätään
+
+            // otsikkotiedon hakeminen ja sijoittaminen h1-elementtiin 
             teksti = "<h1>" + data.toteutuksen_nimi + "</h1>";
-          }
-          </script>
-          </body>
+
+            // tähän tulee muiden tietojen käsittely kohta
+            teksti = teksti + "<p>" + data.osallistujien_lukumaara + "</p>"; 
+            //teksti-muuttujan sisällön tulostus 
+            document.getElementById("vastaus").innerHTML = teksti;
+        }
+
+      
+      </script>
+</body>
