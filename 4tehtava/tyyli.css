@@ -1,0 +1,32 @@
+.navbar-custom {
+    background-color:  rgb(128,128,128) ;
+}
+
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text{
+    color: black;
+}
+
+
+.navbar-custom .navbar-nav .nav-link {
+    color: black;
+}
+
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: black;
+}
+
+nav a { font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+  .hero {
+         background-image: url('parcguell.jpg'); /* Vaihda kuva omaksi kuvaksi */
+         background-size: cover;
+         background-position: center;
+         height: 100vh;
+         color: white;
+ }
+    
