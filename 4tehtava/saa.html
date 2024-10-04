@@ -42,6 +42,24 @@
 
         <main>
                    
+            <div class="container my-5">
+                <h2>Ajankohtainen sää Barcelonassa</h2>
+                <div id="saa-tiedot" class="alert alert-info"></div>
+            </div>
+
+            <script>
+                $(document).ready(function() {
+                    $.getJSON('saab.json', function(data) {
+                        $('#saa-tiedot').html(`
+                            <strong>Kaupunki:</strong> ${data.city}<br>
+                            <strong>Lämpötila:</strong> ${data.temperature} °C<br>
+                            <strong>Säätila:</strong> ${data.condition}<br>
+                            <strong>Kosteus:</strong> ${data.humidity}%<br>
+                            <strong>Tuulen nopeus:</strong> ${data.wind_speed} km/h
+                        `);
+                    });
+                });
+            </script>
 
         <footer class="py-4 mt-5">
             <div class="container text-center">
@@ -50,11 +68,11 @@
         </footer>
     </main>
        
-         
             
          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
         </body>
         </html>
     
