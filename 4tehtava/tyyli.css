@@ -30,3 +30,19 @@ nav a { font-family: Georgia, 'Times New Roman', Times, serif;
          color: white;
  }
     
+ .carousel-inner img {
+    width: 100%; 
+    height: auto;  
+}
+.carousel {
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+.carousel-item {
+    height: 400px; 
+    overflow: hidden; 
+}
+.carousel-item img {
+    height: 100%; 
+    object-fit: cover; 
+}
