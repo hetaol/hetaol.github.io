@@ -42,14 +42,14 @@ main {
 
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: black;
+    color: white;
 }
 
 nav a { font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
   .hero {
-         background-image: url('parcguell.jpg'); /* Vaihda kuva omaksi kuvaksi */
+         background-image: url('parcguell.jpg'); 
          background-size: cover;
          background-position: center;
          height: 100vh;
